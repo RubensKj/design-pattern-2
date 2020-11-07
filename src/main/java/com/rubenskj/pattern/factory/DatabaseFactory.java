@@ -1,4 +1,4 @@
-package com.rubenskj.pattern;
+package com.rubenskj.pattern.factory;
 
 public class DatabaseFactory {
 

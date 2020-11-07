@@ -1,4 +1,4 @@
-package com.rubenskj.pattern;
+package com.rubenskj.pattern.factory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
