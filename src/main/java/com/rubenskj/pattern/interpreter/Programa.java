@@ -1,5 +1,7 @@
 package com.rubenskj.pattern.interpreter;
 
+import com.rubenskj.pattern.visitor.ImpressoraVisitor;
+
 public class Programa {
 
     public static void main(String[] args) {
@@ -11,7 +13,8 @@ public class Programa {
 
         int resultado = soma.avalia();
 
-        // Output: 43
-        System.out.println(resultado);
+        ImpressoraVisitor impressoraVisitor = new ImpressoraVisitor();
+
+        soma.aceita(impressoraVisitor);
     }
 }

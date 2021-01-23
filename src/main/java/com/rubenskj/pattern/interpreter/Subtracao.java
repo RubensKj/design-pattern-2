@@ -1,5 +1,7 @@
 package com.rubenskj.pattern.interpreter;
 
+import com.rubenskj.pattern.visitor.ImpressoraVisitor;
+
 public class Subtracao implements Expressao {
 
     private Expressao esquerda;
@@ -13,5 +15,18 @@ public class Subtracao implements Expressao {
     @Override
     public int avalia() {
         return esquerda.avalia() - direita.avalia();
+    }
+
+    public Expressao getEsquerda() {
+        return esquerda;
+    }
+
+    public Expressao getDireita() {
+        return direita;
+    }
+
+    @Override
+    public void aceita(ImpressoraVisitor impressoraVisitor) {
+        impressoraVisitor.visitaSubtracao(this);
     }
 }
