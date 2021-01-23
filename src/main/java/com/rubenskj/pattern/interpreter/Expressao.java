@@ -1,10 +1,10 @@
 package com.rubenskj.pattern.interpreter;
 
-import com.rubenskj.pattern.visitor.ImpressoraVisitor;
+import com.rubenskj.pattern.visitor.Visitor;
 
 public interface Expressao {
 
     int avalia();
 
-    void aceita(ImpressoraVisitor impressoraVisitor);
+    void aceita(Visitor visitor);
 }

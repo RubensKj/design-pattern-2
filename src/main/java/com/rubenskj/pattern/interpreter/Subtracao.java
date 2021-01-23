@@ -1,6 +1,6 @@
 package com.rubenskj.pattern.interpreter;
 
-import com.rubenskj.pattern.visitor.ImpressoraVisitor;
+import com.rubenskj.pattern.visitor.Visitor;
 
 public class Subtracao implements Expressao {
 
@@ -26,7 +26,7 @@ public class Subtracao implements Expressao {
     }
 
     @Override
-    public void aceita(ImpressoraVisitor impressoraVisitor) {
-        impressoraVisitor.visitaSubtracao(this);
+    public void aceita(Visitor visitor) {
+        visitor.visitaSubtracao(this);
     }
 }

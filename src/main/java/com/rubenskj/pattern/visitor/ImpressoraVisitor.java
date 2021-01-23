@@ -2,8 +2,9 @@ package com.rubenskj.pattern.visitor;
 
 import com.rubenskj.pattern.interpreter.*;
 
-public class ImpressoraVisitor {
+public class ImpressoraVisitor implements Visitor {
 
+    @Override
     public void visitaSoma(Soma soma) {
         System.out.print("(");
 
@@ -18,6 +19,7 @@ public class ImpressoraVisitor {
         System.out.print(")");
     }
 
+    @Override
     public void visitaSubtracao(Subtracao subtracao) {
         System.out.print("(");
 
@@ -32,6 +34,7 @@ public class ImpressoraVisitor {
         System.out.print(")");
     }
 
+    @Override
     public void visitaMultiplicacao(Multiplicacao multiplicacao) {
         System.out.print("(");
 
@@ -46,6 +49,7 @@ public class ImpressoraVisitor {
         System.out.print(")");
     }
 
+    @Override
     public void visitaDivisao(Divisao divisao) {
         System.out.print("(");
 
@@ -60,12 +64,14 @@ public class ImpressoraVisitor {
         System.out.print(")");
     }
 
+    @Override
     public void visitaRaizQuadrada(RaizQuadrada raizQuadrada) {
         System.out.print("sqrt(");
         raizQuadrada.getExpressao().aceita(this);
         System.out.print(")");
     }
 
+    @Override
     public void visitaNumero(Numero numero) {
         System.out.print(numero.getNumero());
     }
