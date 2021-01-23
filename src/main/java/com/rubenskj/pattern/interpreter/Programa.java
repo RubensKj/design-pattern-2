@@ -1,6 +1,7 @@
 package com.rubenskj.pattern.interpreter;
 
 import com.rubenskj.pattern.visitor.ImpressoraVisitor;
+import com.rubenskj.pattern.visitor.PreFixedVisitor;
 
 public class Programa {
 
@@ -14,7 +15,13 @@ public class Programa {
         int resultado = soma.avalia();
 
         ImpressoraVisitor impressoraVisitor = new ImpressoraVisitor();
-
         soma.aceita(impressoraVisitor);
+
+        System.out.println("");
+        System.out.println("===== PRE FIXED =====");
+
+        PreFixedVisitor preFixedVisitor = new PreFixedVisitor();
+
+        soma.aceita(preFixedVisitor);
     }
 }
